@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		<!-- Login -->
+		<action name="login" class="com.railway.action.LoginAction">
+			<result name="success">/dashboard.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+
+		<!-- Search Train -->
+		<action name="searchTrain"
+			class="com.railway.action.SearchTrainAction">
+			<result name="success">/searchResult.jsp</result>
+			<result name="error">/searchTrain.jsp</result>
+		</action>
+		<action name="bookTicket"
+			class="com.railway.action.BookTicketAction">
+			<result name="success">/bookingSuccess.jsp</result>
+			<result name="error">/bookTicket.jsp</result>
+			<result name="input">/bookTicket.jsp</result>
+		</action>
+		<action name="myBookings"
+			class="com.railway.action.MyBookingsAction">
+
+			<result name="success">/myBookings.jsp</result>
+
+			<result name="error">/login.jsp</result>
+
+		</action>
+		<action name="cancelTicket"
+			class="com.railway.action.CancelTicketAction">
+
+			<result name="success" type="redirectAction">
+				<param name="actionName">myBookings</param>
+			</result>
+
+			<result name="error">/myBookings.jsp</result>
+
+		</action>
+		<action name="logout" class="com.railway.action.LogoutAction">
+
+    <result name="success">/index.jsp</result>
+
+</action>
+		<action name="searchPNR"
+			class="com.railway.action.SearchPNRAction">
+
+			<result name="success">/pnrResult.jsp</result>
+
+			<result name="error">/searchPNR.jsp</result>
+
+		</action>
+		<action name="adminLogin"
+			class="com.railway.action.AdminLoginAction">
+
+			<result name="success">/adminDashboard.jsp</result>
+
+			<result name="error">/adminLogin.jsp</result>
+
+		</action>
+		<action name="addTrain"
+			class="com.railway.action.AddTrainAction">
+
+			<result name="success">/adminDashboard.jsp</result>
+
+			<result name="error">/addTrain.jsp</result>
+
+			<result name="input">/addTrain.jsp</result>
+
+		</action>
+		<action name="viewTrains"
+			class="com.railway.action.ViewTrainAction">
+
+			<result name="success">/viewTrains.jsp</result>
+
+		</action>
+		<action name="viewAllBookings"
+			class="com.railway.action.ViewBookingsAction">
+
+			<result name="success">/viewBookings.jsp</result>
+
+		</action>
+		<action name="deleteTrain"
+        class="com.railway.action.DeleteTrainAction">
+
+    <result name="success" type="redirectAction">
+        <param name="actionName">viewTrains</param>
+    </result>
+
+    <result name="error" type="redirectAction">
+        <param name="actionName">viewTrains</param>
+    </result>
+    
+
+</action>
+<action name="register"
+        class="com.railway.action.RegisterAction">
+
+   <result name="success">/login.jsp</result>
+<result name="error">/register.jsp</result>
+
+</action>
+	</package>
+
+</struts>
