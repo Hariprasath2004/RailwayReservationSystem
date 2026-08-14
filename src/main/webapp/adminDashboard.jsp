@@ -65,10 +65,10 @@ button:hover{
 
 <div style="padding:15px;background:#1976d2;color:white;">
 
-    <h2>🚆 Railway Reservation System - Admin Panel</h2>
+    <h2> Railway Reservation System - Admin Panel</h2>
 
     <a href="index.jsp" style="color:white;text-decoration:none;font-weight:bold;">
-        🏠 Home
+          Home
     </a>
 
     &nbsp;&nbsp;&nbsp;
@@ -81,7 +81,7 @@ button:hover{
                font-weight:bold;
                cursor:pointer;
                font-size:16px;">
-        🚪 Logout
+         Logout
     </button>
 </form>
 

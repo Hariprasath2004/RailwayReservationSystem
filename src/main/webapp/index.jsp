@@ -11,7 +11,7 @@
 
 <body>
 
-	<h1>🚆 Railway Reservation System</h1>
+	<h1>Railway Reservation System</h1>
 
 	<br>
 

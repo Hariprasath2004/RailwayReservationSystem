@@ -8,7 +8,7 @@ if (username == null) {
     return;
 }
 %>
-%>
+
 <!DOCTYPE html>
 <html>
 
